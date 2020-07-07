@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple text editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+<div class="page">
+    <div class="app-wrapper">
+        <nav class="app-nav">
+            <ul class="app-nav-list app-nav-list--first-line">
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="cut"><i class="fas fa-cut"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="copy"><i class="fas fa-copy"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="paste"><i class="fas fa-paste"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="selectAll"><i class="fas fa-clipboard-check"></i></button>
+                </li>
+                <li class="app-nav-item separator">
+                    <button class="app-btn" data-command="delete"><i class="fas fa-trash-alt"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="redo"><i class="fas fa-redo"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="undo"><i class="fas fa-undo"></i></button>
+                </li>
+            </ul>
+            <ul class="app-nav-list">
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="bold"><i class="fas fa-bold"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="italic"><i class="fas fa-italic"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="underline"><i class="fas fa-underline"></i></button>
+                </li>
+                <li class="app-nav-item separator">
+                    <button class="app-btn" data-command="strikeThrough"><i class="fas fa-strikethrough"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="superscript"><i class="fas fa-superscript"></i></button>
+                </li>
+                <li class="app-nav-item separator">
+                    <button class="app-btn" data-command="subscript"><i class="fas fa-subscript"></i></button>
+                </li>
+                <li class="app-nav-item separator">
+                    <button class="app-btn" data-command="createLink"><i class="fas fa-link"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="justifyFull"><i class="fas fa-align-justify"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="justifyLeft"><i class="fas fa-align-left"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="justifyCenter"><i class="fas fa-align-center"></i></button>
+                </li>
+                <li class="app-nav-item">
+                    <button class="app-btn" data-command="justifyRight"><i class="fas fa-align-right"></i></button>
+                </li>
+            </ul>
+        </nav>
+        <main class="app-editor" contenteditable="true">
+            This is an example text.
+        </main>
+    </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
