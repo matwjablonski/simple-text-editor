@@ -1,0 +1,31 @@
+{
+  "name": "simple-text-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass -w -o public/assets/css --output-style compressed src/assets/scss/app.scss & live-server public/ -o -c-1 & onchange src/**/*.js src/**/*.html -- npm run build:move-files",
+    "build": "rm -rf public/ && npm-run-all build:*",
+    "build:init-public": "mkdir -p public public/assets/ public/assets/js public/assets/css",
+    "build:move-files": "cp src/index.html public/ && cp src/assets/js/app.js public/assets/js/",
+    "build:sass": "node-sass -o public/assets/css --output-style compressed src/assets/scss/app.scss",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matwjablonski/simple-text-editor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matwjablonski/simple-text-editor/issues"
+  },
+  "homepage": "https://github.com/matwjablonski/simple-text-editor#readme",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2"
+  }
+}
